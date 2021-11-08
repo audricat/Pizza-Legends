@@ -1,4 +1,5 @@
 import hero from './images/characters/hero.png'
+console.log(hero);
 class GameObject {
     constructor(config) {
         this.x = config.x || 0;
