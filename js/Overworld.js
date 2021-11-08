@@ -17,41 +17,21 @@ class Overworld {
         };
 
         image.src = "../images/maps/DemoLower.png";
-       
-        //creating hero character
-        const hero = new Image();
-        const x = 5;
-        const y = 6;
         
-        const shadow = new Image();
-        shadow.onload = () => {
-            this.context.drawImage(
-                shadow, 
-                0, 
-                0,
-                32,
-                32,
-                x * 16 - 8,
-                y * 16 - 18,
-                32,
-                32)
-        };
+        //Place Game Objects!
+        const hero = new GameObject({
+            x: 5,
+            y: 6,
+        })
+        const npc1 = new GameObject({
+            x: 7,
+            y: 9,
+            src: "../images/characters/people/npc1.png"
+        })        
 
-        shadow.src = "../images/characters/shadow.png";
-
-        hero.onload = () => {
-            this.context.drawImage(
-                hero, 
-                0, 
-                0,
-                32,
-                32,
-                x * 16 - 8,
-                y * 16 - 18,
-                32,
-                32)
-        };
-
-        hero.src = "../images/characters/people/hero.png";
+        setTimeout(() =>{
+            hero.sprite.draw(this.context);        
+            npc1.sprite.draw(this.context);
+        }, 200)
     }
 }
