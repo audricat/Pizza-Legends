@@ -26,7 +26,7 @@ class Overworld {
         const npc1 = new GameObject({
             x: 7,
             y: 9,
-            src: "./images/characters/people/npc1.png"
+            src: "/images/characters/people/npc1.png"
         })        
 
         setTimeout(() =>{
