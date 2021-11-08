@@ -1,4 +1,4 @@
-import hero from './images/characters/hero.png'
+import hero from '/images/characters/hero.png'
 console.log(hero);
 class GameObject {
     constructor(config) {
